@@ -244,8 +244,9 @@ li a {
             Event
   ============================*/
 .event-box {
+    
     height : 200px;
-    padding : 50px 200px;
+    padding : 6% 15%;
     background-color: white;
     font-family:  Geneva, Verdana;
     text-align: center;
@@ -256,6 +257,22 @@ li a {
     
     color:white;
 }
+@media screen and  (max-width :1000px)
+{
+    .event-box{
+        height: 270px;
+        font-size: medium;
+    } 
+} 
+    
+    @media screen and  (max-width :600px)
+    {
+        .event-box{
+            height: 320px;
+            
+        }
+    }
+   
 
 
 /*==========================
@@ -263,6 +280,7 @@ li a {
   ============================*/
 .venue{
     background-image: url("../img/black-felt.png");
+    position: static;
     height: 700px;
     background-color: black;
     width:100%;
@@ -314,7 +332,66 @@ li a {
     color: white;
     z-index: 1;
 }
-
+@media screen and (max-width :500px){
+    .venue-info{
+        height : 300px;
+        width : 53%;
+        position: relative;
+        top: 300px;
+        left: 70px;
+        margin : 0 4%;
+        padding : 0 4%;
+        
+    }
+    .venue{
+        height:800px;
+    }
+    .venue-map{
+        height: 30%;
+        position: absolute;
+        left: 15%;
+        background-color: black;
+        width : 60%;
+        padding : 0 4%;
+    }
+    .map{
+        height: 100%;
+        position: relative;
+        width:100%;
+    }
+    .venue-info-pic-text{
+        font-size: 10px;
+        left:0;
+    }
+}
+@media screen and  (max-width :800px)
+{
+    .venue-header {
+        
+        font-size: medium;
+    }
+    .venue-header>p{
+        font-size: smaller;
+    }
+   
+}
+@media screen and (max-width:380px){
+    .venue-info{
+        height : 300px;
+        width : 53%;
+        position: relative;
+        top: 250px;
+        left: 50px;
+        margin : 0 4%;
+        padding : 0 4%;
+        
+    }
+    .venue-info-pic-text{
+        font-size: 8px;
+        left:0;
+    }
+}
+}
 
 /*==========================
             Contact
@@ -322,7 +399,7 @@ li a {
 #contact{
     
     background-image: url(../img/cream-dust.png);
-    padding: 60px 0;
+    padding: 3% 0 50px 0;
     width:100%;
     height: 270px;
 }
@@ -330,10 +407,10 @@ li a {
 
 .contact-container{
     
-    padding:20px;
+    padding:0 ;
     margin:0;
     position: relative;
-    left:15%;
+    left:10%;
     width:70%;
     
 }
@@ -362,7 +439,26 @@ li a {
     color: #0097e6;
     size: medium;
 }
-
+@media screen and  (max-width :560px)
+    {
+        #contact{
+            height:600px;
+        }
+      .contact-container{
+          height: 500px;
+      }
+      .columns{
+          flex-direction: column;
+      }
+      .col{
+          position: absolute;
+          left:50%;
+          transform: translate(-50%,0);
+          width: 200%;
+          float: center;
+          font-size: small;
+      }
+    }
 /*==========================
             Footer
   ============================*/
@@ -372,7 +468,7 @@ li a {
     padding: 5%;
     color: #eee;
     font-size: 14px;
-    
+    position: static;
     width:100%;
     height: 300px;
     display: block;
@@ -384,6 +480,7 @@ li a {
     position: relative;
     left:12%;
     width:70%;
+    height:100%;
     background-color: black;
     height: 335px;
     display: inline-block;
@@ -432,6 +529,31 @@ li a {
  a:hover{
      font-size: 16px;
      transition: 0.5s;
+ }
+ @media screen and (max-width:500px){
+    #footer{
+        height:350px;
+        background: black;
+        background-image: url("../img/black-linen-2.png");
+    }
+     .footer-container{
+         background-image:none;
+         background: black;
+         position: relative;
+         padding:0;
+         margin:0;
+         top:0;
+         left:0;
+         background-image: url("../img/black-linen-2.png");
+     }
+     .footer-box{
+         flex-direction: column;
+        
+     }
+     
+    .footer-box-text{
+        font-size:10px;
+    }
  }
 
  
